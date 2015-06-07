@@ -17,10 +17,10 @@ public class ApiController {
     @RequestMapping("/")
     public String index() {
         return "<h2> Info dedo fernetero </h2>"
-        	 + "<p><b>Tiempo de actualizacion: </b>"+ ConfigResolver.getDelta()+" minutos</p>"+
-        	   "<p><b>Valor actual: </b>" + ValueGetterResolver.getValue()+"</p>"+
+        	 + "<p><b>Tiempo de entrada de una nueva venta: </b>"+ ConfigResolver.getDelta()+" minutos</p>"+
+        	   "<p><b>Numero actual de ventas: </b>" + ValueGetterResolver.getValue()+"</p>"+
         	 "<h3>Operaciones:</h3>"+
-        	   "<p>/config?delta=n : Configura el tiempo de refresco</p>" +
+        	   "<p>/config?delta=n : Configura el tiempo de entrada de una nueva venta</p>" +
         	 "<p>/value : retorna el valor actual</p>";
     }
     

@@ -12,7 +12,7 @@ public class ValueGetterResolver {
 		 long diff = now.getTime() - ConfigResolver.getLastTimeAsked().getTime();
 		 long diffMinutes = diff / (60 * 1000) % 60;
 		 if(diffMinutes >= ConfigResolver.getDelta()){
-			 value++;
+			 value= value + (diffMinutes / ConfigResolver.getDelta());
 			 ConfigResolver.setLasTimeAsked(now);
 		 }		
 		 return value;		
